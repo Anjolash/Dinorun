@@ -3,7 +3,7 @@ class Unicorn{
         this.x = 50;
         this.y = height - 155;
         this.vy = 0;
-        this.gravity = 4.81;
+        this.gravity = 2.41;
     }  
 
     jump(){
