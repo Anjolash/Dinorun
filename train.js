@@ -10,8 +10,6 @@ class Train{
 
     show(){
         image(tImg, this.x, this.y, 100, 100)
-        fill(255,50);
-        ellipseMode(CORNER);
-        ellipse(this.x,this.y, 100, 100)
+        
     }
 }

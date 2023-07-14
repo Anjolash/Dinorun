@@ -7,6 +7,8 @@ let soundClassifier;
 let score = 0;
 let levelChange = 5000
 let prevTrainX = -1000;
+let bgOffset = 0;
+
 
 function preload(){
     const options = { probabilityThreshold: 0.85 };
@@ -42,12 +44,19 @@ function keyPressed(){
 }
 
 function draw() {
+    background(bImg);
     if(random(1) < 0.09 && canPushTrain() ){
         const newTrain = new Train();
         trains.push(newTrain);
         prevTrainX = newTrain.x;
     }
-    background(bImg);
+
+    bgOffset -= 2;
+    if (bgOffset < -width) {
+        bgOffset = 0;
+    }
+    image(bImg, bgOffset, 0, width, height);
+    image(bImg, bgOffset + width, 0, width, height)
     for ( let t of trains){
         t.move();
         t.show();

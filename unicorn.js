@@ -31,6 +31,5 @@ class Unicorn{
         image(uImg,this.x,this.y, 155, 155);
         fill(255,50);
         ellipseMode(CORNER);
-        ellipse(this.x,this.y, 155, 155)
     }
 }
